@@ -1,13 +1,29 @@
 name: Playwright Tests
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Install dependencies
-        run: npm ci
-      - name: Run Playwright tests
-        run: npx playwright test
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm install
+
+      # ✅ This line installs Chromium, Firefox, WebKit for Playwright
+      - run: npx playwright install
+
+      # Optional: install ts-node if you use it to run server.ts
+      - run: npm install --save-dev ts-node
+
+      # Run tests
+      - run: npx playwright test
