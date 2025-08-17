@@ -1,0 +1,24 @@
+{
+  "name": "booking-ui-mock-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node server.ts",
+    "test": "start-server-and-test start http://127.0.0.1:5500/public/index.html playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.0",
+    "start-server-and-test": "^2.0.13",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

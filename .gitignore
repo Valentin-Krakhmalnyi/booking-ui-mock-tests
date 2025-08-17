@@ -1,0 +1,27 @@
+# Node.js
+node_modules/
+dist/
+*.log
+
+# Playwright test artifacts
+test-results/
+playwright-report/
+*.png
+*.webm
+*.mp4
+
+# TypeScript
+*.tsbuildinfo
+
+# VSCode
+.vscode/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Environment files (if used)
+.env
+.env.local
+.env.test
+.env.production
