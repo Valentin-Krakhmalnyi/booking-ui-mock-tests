@@ -8,4 +8,6 @@ test('Search hotels in New York (mock)', async ({ page }) => {
   await page.click('#autocomplete-result');
 
   await expect(page.locator('#results')).toContainText('Hotels in New York');
+  await expect(page.locator('#subtitle')).toHaveText('Mock Booking UI');
+
 });
